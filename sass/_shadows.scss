@@ -1,0 +1,44 @@
+.shadow--top-bottom{
+  position: relative;
+  background-color: #FFFFFF;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #DDDDDD;
+  border-radius: 0px;
+  box-shadow: 0px 1px 4px 0px #99A3AD, inset 0px 0px 40px #EEEEEE;
+}
+.shadow--top-bottom:before{
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 95%;
+  top: 0px;
+  right: 10px;
+  bottom: 0px;
+  left: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px #2A2E31;
+}
+.shadow--top-bottom:after{
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 95%;
+  top: 0px;
+  right: 10px;
+  bottom: 0px;
+  left: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px #2A2E31;
+}
+.shadow--top-bottom-inset {
+  -moz-box-shadow: 0 22px 22px -22px rgba(0, 0, 0, 0.8) inset, 0 -22px 22px -22px rgba(0, 0, 0, 0.8) inset;
+  -webkit-box-shadow: 0 22px 22px -22px rgba(0, 0, 0, 0.8) inset, 0 -22px 22px -22px rgba(0, 0, 0, 0.8) inset;
+  box-shadow: 0 22px 22px -22px rgba(0, 0, 0, 0.8) inset, 0 -22px 22px -22px rgba(0, 0, 0, 0.8) inset;
+}
+.shadow--standard {
+  -moz-box-shadow: 0px 0px 11px #474747;
+  -webkit-box-shadow: 0px 0px 11px #474747;
+  box-shadow: 0px 0px 11px #474747;
+  transition: 1s;
+}
