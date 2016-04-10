@@ -93,25 +93,13 @@
    });
  }
 
- function slider() {
-
-    $('.latest-mid').slideme({
-    pagination: 'numbers',
-    autoslide: true,
-    autoslideHoverStop: true,
-    interval: 5000,
-    loop: true,
-    transition: 'slide',
-  });
- }
-
- function itemSlide() {
-   var carousel = $("#scrolling-list");
-    carousel.itemslide();
-}
-
- function slick() {
+ // Slick latest posts slider script
+ // ========================||▷
+ function latestPostsSlick() {
    $('.slick-slider').slick({
+
+     // Slick configuration
+     // ========================||▷
      arrows: false,
      dots: true,
      centerMode: true,
@@ -154,6 +142,6 @@ menuHide();
 typeCoverHide();
 peopleShowDetails();
 animateMenuItems();
-slick();
+latestPostsSlick();
 
 })(window.$, window._);
