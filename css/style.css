@@ -289,7 +289,7 @@ body, html {
 .top-menu--hidden {
   transform: translate(0, -50px); }
 
-.top-menu--hidden:hover {
+#top-menu:hover {
   transform: translate(0, 0px); }
 
 #top-menu {
@@ -306,18 +306,18 @@ body, html {
   box-shadow: 0 26px 36px -24px black; }
   #top-menu #navigation {
     display: flex;
-    width: 520px;
-    margin: auto;
     color: #fff; }
     #top-menu #navigation li {
       align-items: flex-end;
       padding: 20px; }
-    #top-menu #navigation .menu-img {
+  #top-menu .menu-img {
+    position: absolute;
+    left: 50%;
+    width: 60px;
+    margin-left: -30px; }
+    #top-menu .menu-img img {
       width: 60px;
-      margin: 5px 20px 0 20px; }
-      #top-menu #navigation .menu-img img {
-        width: 60px;
-        height: auto; }
+      height: auto; }
 
 #main {
   text-align: center; }
@@ -325,30 +325,35 @@ body, html {
     background: url("img/header_background.jpg") no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
     font-size: 5rem;
     height: 100vh;
     width: 100vw; }
     #main #header .header-bit {
-      padding-top: 20vh;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -200px;
+      margin-left: -125px;
       line-height: 3rem;
-      width: 250px;
-      margin: auto; }
+      width: 250px; }
       #main #header .header-bit img {
         width: 100%;
         height: auto; }
   #main #overview {
     background-color: #fff;
     position: relative;
-    height: 150vh;
     width: 100%;
-    margin: auto; }
+    margin: auto;
+    padding-bottom: 250px; }
     #main #overview .skyline {
       position: absolute;
-      top: -350px;
       left: 50%;
       margin-left: -480px; }
       #main #overview .skyline h3 {
         margin-top: -410px; }
+      #main #overview .skyline img {
+        margin-top: -350px; }
     #main #overview .introduction {
       position: relative;
       padding-top: 65vh;
@@ -418,7 +423,8 @@ body, html {
     background-color: rgba(110, 184, 238, 0.75);
     background: url("img/mid_background.jpg") no-repeat;
     background-size: cover;
-    background-attachment: fixed; }
+    background-attachment: fixed;
+    background-position: center; }
     #main #quotation .content {
       position: absolute;
       width: 960px;
@@ -426,10 +432,6 @@ body, html {
       top: 50%;
       margin-top: -3rem;
       margin-left: -480px; }
-      #main #quotation .content h3 {
-        width: 100%;
-        text-align: center;
-        color: #fff; }
   #main #topics {
     background-color: #fff; }
     #main #topics .content h2 {
@@ -455,10 +457,6 @@ body, html {
         height: 103%;
         margin: 0;
         pointer-events: none; }
-        #main #topics .content .blocks .cover h3 {
-          padding: 80px;
-          font-weight: bold;
-          color: #fff; }
       #main #topics .content .blocks .society {
         -webkit-border-top-right-radius: 50px;
         -moz-border-radius-topright: 50px;
@@ -554,9 +552,9 @@ body, html {
         max-height: 335px; }
         #main #latest-posts .latest-mid .slick-slider .slick-list .slick-track .slick-slider--element {
           position: relative;
-          margin: 0 5px; }
+          margin: 0; }
           #main #latest-posts .latest-mid .slick-slider .slick-list .slick-track .slick-slider--element .cover:hover {
-            padding-top: 120px;
+            padding-top: 10px;
             transition: 0.5s;
             background-color: rgba(0, 0, 0, 0.9); }
           #main #latest-posts .latest-mid .slick-slider .slick-list .slick-track .slick-slider--element .cover {
@@ -574,7 +572,7 @@ body, html {
             #main #latest-posts .latest-mid .slick-slider .slick-list .slick-track .slick-slider--element .cover h3 {
               font-size: 4rem;
               font-weight: bold;
-              line-height: 6rem;
+              line-height: 4.5rem;
               max-width: 100%;
               text-align: left;
               margin-left: 50px;
@@ -584,7 +582,7 @@ body, html {
             #main #latest-posts .latest-mid .slick-slider .slick-list .slick-track .slick-slider--element .cover p {
               padding: 10px 50px; }
           #main #latest-posts .latest-mid .slick-slider .slick-list .slick-track .slick-slider--element img {
-            width: 100%;
+            min-width: 100%;
             height: 100%;
             margin: auto;
             overflow: hidden;
@@ -599,7 +597,7 @@ body, html {
         height: 100%;
         width: 100%;
         background: url("img/latest_bg.jpg") no-repeat;
-        background-size: 50% auto;
+        background-size: auto 100%;
         background-position: right; }
         #main #latest-posts .latest-bottom .latest-bottom--inside .content {
           height: 100%;
@@ -647,3 +645,157 @@ body, html {
 
 /* operational end */
 /* main CSS end */
+/* RWD sass import */
+/* _rwd.scss */
+@media screen and (max-width: 960px) {
+  html, body {
+    font-size: 50%;
+    /* global overrides */
+    /* global overrides end */ }
+    html .content, body .content {
+      width: 100vw !important; }
+    html .separator, html .separator--dark, html .separator--light, body .separator, body .separator--dark, body .separator--light {
+      width: 100vw;
+      background-size: 100vw auto;
+      margin: 20px auto;
+      height: 30px; }
+  .top-menu--rwd {
+    transform: translate(0, -250px); }
+  .top-menu--hidden {
+    transform: translate(0, -300px); }
+  #top-menu {
+    display: block;
+    width: 100vw;
+    height: auto;
+    padding-bottom: 60px; }
+    #top-menu #navigation {
+      border-bottom: solid 1px #3a3a3a;
+      display: block;
+      width: 90%;
+      text-align: center;
+      margin-bottom: 15px;
+      margin-left: 5%; }
+  #main #header .header-bit {
+    margin-top: -140px; }
+  #main #overview {
+    background-color: #fff;
+    position: relative;
+    height: 150vh;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 0px; }
+    #main #overview .skyline {
+      position: absolute;
+      margin-left: -205.5px; }
+      #main #overview .skyline h3 {
+        margin: 0px 20px 0px 20px;
+        border-bottom: 1px solid #dbdbdb;
+        padding-bottom: 30px; }
+      #main #overview .skyline img {
+        margin-top: -116px;
+        width: 320px; }
+    #main #overview .introduction {
+      padding-top: 350px; }
+      #main #overview .introduction .people {
+        width: 100vw;
+        height: 150px;
+        margin: 100px auto;
+        display: block; }
+        #main #overview .introduction .people .person {
+          width: 150px;
+          margin: 80px auto; }
+          #main #overview .introduction .people .person .person-under h4 {
+            padding-top: 175px; }
+          #main #overview .introduction .people .person .person-cover {
+            left: 0;
+            margin-left: 2.5vw;
+            width: 95vw;
+            height: 750px; }
+            #main #overview .introduction .people .person .person-cover .person-cover--photo {
+              left: 50%;
+              top: 60px;
+              margin-left: -87.5px;
+              background: #352f2f; }
+            #main #overview .introduction .people .person .person-cover .person-cover--description {
+              position: initial;
+              padding: 400px 5%;
+              left: 0;
+              height: auto;
+              width: 100%; }
+              #main #overview .introduction .people .person .person-cover .person-cover--description h4 {
+                width: 90%;
+                height: 50px; }
+              #main #overview .introduction .people .person .person-cover .person-cover--description p {
+                width: 90%;
+                height: 160px; }
+  #main #quotation {
+    color: #fff; }
+    #main #quotation .content {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -3rem;
+      margin-left: 0; }
+  #main #topics {
+    background-color: #fff; }
+    #main #topics .content h2 {
+      padding-top: 100px; }
+    #main #topics .content .blocks {
+      margin: 100px 0; }
+      #main #topics .content .blocks .block {
+        position: relative;
+        width: 100vw;
+        height: 105px;
+        margin: 50px auto;
+        border: solid 1.5px #ddd; }
+        #main #topics .content .blocks .block .text {
+          width: auto;
+          padding: 10px;
+          margin: auto !important; }
+          #main #topics .content .blocks .block .text h4 {
+            margin-bottom: 5px !important; }
+          #main #topics .content .blocks .block .text p {
+            line-height: 1.6rem !important; }
+      #main #topics .content .blocks .cover {
+        position: absolute;
+        top: -1.5%;
+        left: -1.5%;
+        width: 103%;
+        height: 103%;
+        margin: 0;
+        pointer-events: none;
+        background-size: 100% auto !important; }
+      #main #topics .content .blocks .society {
+        background: none; }
+      #main #topics .content .blocks .travel {
+        background: none; }
+      #main #topics .content .blocks .critique {
+        background: none; }
+  #main #latest-posts .latest-bottom {
+    height: 300px;
+    background-color: inherit; }
+    #main #latest-posts .latest-bottom .latest-bottom--inside {
+      height: 100%;
+      width: 100%;
+      background: url("img/latest_bg.jpg") no-repeat;
+      background-size: auto 100%;
+      background-position: right; }
+      #main #latest-posts .latest-bottom .latest-bottom--inside .content {
+        height: 100%;
+        position: relative; }
+        #main #latest-posts .latest-bottom .latest-bottom--inside .content .quote {
+          padding-top: 110px;
+          width: 100%;
+          color: #fff;
+          background: url("img/quotes_light.png") no-repeat;
+          background-position: 122px 95px;
+          background-size: 30px 30px; }
+          #main #latest-posts .latest-bottom .latest-bottom--inside .content .quote h3 {
+            font-size: 3.5rem;
+            width: 250px;
+            margin: auto;
+            text-align: center;
+            line-height: 4rem; } }
+
+/* _rwd.scss end */
+/* RWD sass import end */
