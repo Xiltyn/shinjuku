@@ -775,6 +775,8 @@ body, html {
         background: none; }
       #main #topics .content .blocks .critique {
         background: none; }
+  #main #latest-posts .latest-mid .slick-slider .slick-list .slick-track .slick-slider--element .cover {
+    padding-top: 10px; }
   #main #latest-posts .latest-bottom .latest-bottom--inside .content .quote {
     width: 100%; } }
 

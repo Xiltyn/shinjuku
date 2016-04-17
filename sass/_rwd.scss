@@ -172,6 +172,19 @@
       }
     }
   #latest-posts {
+    .latest-mid {
+      .slick-slider {
+        .slick-list {
+          .slick-track {
+            .slick-slider--element {
+              .cover {
+                padding-top: 10px;
+              }
+            }    
+          }
+        }
+      }
+    }
     .latest-bottom {
       .latest-bottom--inside {
         .content {
