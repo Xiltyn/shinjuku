@@ -424,7 +424,8 @@ body, html {
     background: url("img/mid_background.jpg") no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center; }
+    background-position: center;
+    color: #fff; }
     #main #quotation .content {
       position: absolute;
       width: 960px;
@@ -680,7 +681,7 @@ body, html {
   #main #overview {
     background-color: #fff;
     position: relative;
-    height: 150vh;
+    height: 1400px;
     width: 100%;
     margin: auto;
     padding-bottom: 0px; }
@@ -744,16 +745,16 @@ body, html {
       margin: 100px 0; }
       #main #topics .content .blocks .block {
         position: relative;
-        width: 100vw;
-        height: 105px;
-        margin: 50px auto;
+        width: 320px;
+        height: 150px;
+        margin: 20px auto;
         border: solid 1.5px #ddd; }
         #main #topics .content .blocks .block .text {
           width: auto;
           padding: 10px;
           margin: auto !important; }
           #main #topics .content .blocks .block .text h4 {
-            margin-bottom: 5px !important; }
+            margin-bottom: 15px !important; }
           #main #topics .content .blocks .block .text p {
             line-height: 1.6rem !important; }
       #main #topics .content .blocks .cover {
@@ -764,7 +765,10 @@ body, html {
         height: 103%;
         margin: 0;
         pointer-events: none;
-        background-size: 100% auto !important; }
+        background-color: #fff;
+        background-size: 100% auto !important;
+        background-position: center !important;
+        background-color: #fff !important; }
       #main #topics .content .blocks .society {
         background: none; }
       #main #topics .content .blocks .travel {
